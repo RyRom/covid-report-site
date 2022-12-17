@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+
+  <%- include('partials/nav.ejs') %>
+    <h2 class="text-left">The <strong>Report</strong> Page</h2>
+
+    <img src="https://drive.google.com/uc?export=view&amp;id=10zGhP-q2-dkwaUJzwu0lv85MotJOo3hT" style="width: 100%">
+
+    <h3 class=" text-left"> Please provide the detailed information of this reported variant</h3>
+
+    <form action="/reportVariant" method="POST">
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Variant</legend>
+            <div class="col-sm-10" id="radioButtons">
+              <!-- <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="variant" id="Interest" value="Interest" checked="">
+                <label class="form-check-label" for="Interest">Interest</label>
+              </div>
+              <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="variant" id="Concern" value="Concern">
+                <label class="form-check-label" for="Concern">Concern</label>
+              </div>
+              <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="variant" id="High Consequence" value="High Consequence">
+                <label class="form-check-label" for="High Consequence">High Consequence</label>
+              </div> -->
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="variantName" placeholder="Name">
+          </div>
+        </div>
+
+        <span id="duplicate"></span>
+
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">First Detect</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="country" id="name" placeholder="Country - Month Year">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Attributes</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="attributes" id="name" placeholder="What is the traits of this variant">
+          </div>
+        </div>
+
+        <button type="submit" id="checkBtn" class="btn btn-primary"> Report </button>
+    </form>
+
+    <script src="/js/report.js"></script>
+
+</body>
+</html>

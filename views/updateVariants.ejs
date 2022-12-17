@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+
+  <%- include('partials/nav.ejs') %>
+    <h1>Update Variant Attribute</h1>
+
+    <form method="POST" action="/updateVariant">
+        <div class="form-group">
+            <h5> Name:  </h5>
+            <p> <%= data[0].name %> </p>
+        </div>
+        <div class="form-group">
+            <h5> Variant:  </h5>
+            <p> <%= data[0].variant %> </p>
+        </div>
+        <div class="form-group">
+            <h5> First Detected:  </h5>
+            <p> <%= data[0].first_detected %> </p>
+        </div>
+        <div class="form-group">
+            <h5> Attributes:  </h5>
+            <textarea name="attributes"><%= data[0].attributes %></textarea>
+        </div>
+        <input type="hidden" name="name" value="<%= data[0].name %>">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</body>
+</html>

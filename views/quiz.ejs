@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+
+  <%- include('partials/nav.ejs') %>
+
+  <h2 class="text-left">The <strong>Quiz</strong> Page</h2>
+
+  <img src="https://drive.google.com/uc?export=view&amp;id=111464IuP2LaqVaCgCfYWWCd8zxVkHkXe" style="width: 100%">
+
+  <h3 class="text-left" id="question"><%= questions[0].question %></h3>
+  <input type="hidden" id="questionId" value="<%= questions[0].qid %>"></hidden>
+
+  <select id="answers">
+  </select>
+
+  <button type="button" id="showDetails" class="btn btn-primary"> Show Details </button>
+  <span id="grade"></span>
+    
+  <script src="/js/quiz.js"></script>
+</body>

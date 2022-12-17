@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+
+  <%- include('partials/nav.ejs') %>
+    
+  <h2 class="text-left">The <strong>Variants</strong> Page</h2>
+
+  <img src="https://drive.google.com/uc?export=view&amp;id=111464IuP2LaqVaCgCfYWWCd8zxVkHkXe" style="width: 100%">
+
+  <h3 class=" text-left"> Details on each variant of SARS-CoV-2 virus </h3>
+
+  <h4>Select variant classification: </h4>
+
+  <div id="placeChoices">
+  </div>
+
+  <button type="button" id="showDetails" class="btn btn-primary"> Show Details </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Variant</th>
+        <th scope="col">First Detected</th>
+        <th scope="col">Attributes</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <script src="/js/variants.js"></script>
+
+</body>
